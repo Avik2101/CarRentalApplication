@@ -1,10 +1,10 @@
 public class CreateData {
     
     public static void createPackageData(){
-        
+
         Account acc = new Account(Name='Lightning Training');
         insert acc;
-        
+
         List<Car_Type__c> carTypes = new List<Car_Type__c>();
         Car_Type__c carType1 = new Car_Type__c(Name='Van');
         Car_Type__c carType2 = new Car_Type__c(Name='Sports');
