@@ -6,7 +6,12 @@ export default class CarSearchResult extends LightningElement {
     @api carTypeId;
     @track carsList;
 
-    @wire(getCars, { carTypeId: this.carTypeId })
+    get carsFound() {
+        if (this.carsList) return true;
+        else false;
+    }
+
+    @wire(getCars, { carTypeId: "$carTypeId" })
     wiredCars({ data, error }) {
         if (data) {
             this.carsList = data;

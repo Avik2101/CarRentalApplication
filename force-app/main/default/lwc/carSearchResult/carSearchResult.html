@@ -1,1 +1,12 @@
-<template> </template>
+<template>
+    <lightning-layout multiple-rows="true" class="slds-align_absolute-center">
+        <template if:true={carsFound}>
+            <template for:each={carsList} for:item="car">
+                <lightning-layout-item key={car.Id} padding="around-small"> {car.Name} </lightning-layout-item>
+            </template>
+        </template>
+        <template if:false={carsFound}>
+            <div class="slds-align_absolute-center">No Cars Found!</div>
+        </template>
+    </lightning-layout>
+</template>
