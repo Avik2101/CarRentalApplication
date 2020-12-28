@@ -4,4 +4,9 @@
     <description>Car Tile</description>
     <isExposed>true</isExposed>
     <masterLabel>Car Tile</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
 </LightningComponentBundle>

@@ -1,8 +1,14 @@
 <template>
-    <lightning-card title="Search Your Car">
+    <lightning-card>
+        <h1 slot="title">Search Your Car</h1>
         <c-car-search-form oncartypeselectchanged={carTypeSelectHandler}></c-car-search-form>
     </lightning-card>
-    <lightning-card title="Matching Cars">
-        <c-car-search-result car-type-id={carTypeId}></c-car-search-result>
+    <lightning-card>
+        <h1 slot="title">Matching Cars</h1>
+        <lightning-layout class="slds-align_absolute-center">
+            <lightning-layout-item padding="around-large">
+                <c-car-search-result car-type-id={carTypeId}></c-car-search-result>
+            </lightning-layout-item>
+        </lightning-layout>
     </lightning-card>
 </template>

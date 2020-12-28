@@ -1,1 +1,10 @@
-<template></template>
+<template>
+    <div class="slds-box polaroid">
+        <a>
+            <img src={car.Picture__c} alt={car.name} />
+            <div class="container">
+                <p class="slds-align_absolute-center">{car.Contact__r.Name}</p>
+            </div>
+        </a>
+    </div>
+</template>
